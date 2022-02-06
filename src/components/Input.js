@@ -7,7 +7,7 @@ class Input extends Component {
   addTodo = () => {
     const task = {action: this.state.action};
     if(task.action && task.action.length > 0){
-      axios.post('https://cors-anywhere.herokuapp.com/https://todo-react-node-server.herokuapp.com/api/todos', task)
+      axios.post('https://todo-react-node-server.herokuapp.com/api/todos', task)
         .then(res => {
           if(res.data){
             this.props.getTodos();
