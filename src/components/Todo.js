@@ -12,7 +12,7 @@ class Todo extends Component {
     this.getTodos();
   }
   getTodos = () => {
-    axios.get('https://cors-anywhere.herokuapp.com/https://todo-react-node-server.herokuapp.com/todos')
+    axios.get('https://cors-anywhere.herokuapp.com/https://todo-react-node-server.herokuapp.com/api/todos')
       .then(res => {
         if(res.data){
           this.setState({
@@ -23,7 +23,7 @@ class Todo extends Component {
       .catch(err => console.log(err))
   }
   deleteTodo = (id) => {
-    axios.delete(`https://cors-anywhere.herokuapp.com/https://todo-react-node-server.herokuapp.com/todos/${id}`)
+    axios.delete(`https://cors-anywhere.herokuapp.com/https://todo-react-node-server.herokuapp.com/api/todos/${id}`)
       .then(res => {
         if(res.data){
           this.getTodos()
