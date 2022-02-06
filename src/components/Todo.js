@@ -32,7 +32,6 @@ class Todo extends Component {
       .catch(err => console.log(err))
   }
   render() {
-    let { todos } = this.state;
     return(
         <div className='main-container'>
         <Input getTodos={this.getTodos}></Input>
